@@ -1,14 +1,15 @@
 var katzDeliLine = []
 
-function takeANumber(katzDeliLine, name){ 
+function takeANumber(katzDeliLine, name) { 
   katzDeliLine.push(name)
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
 }
 
-function nowServing(katzDeliLine){
-  var currentLine= katzDeliLine.shift() 
-  if (katzDeliLine.length > 0){
-  return `Currently serving ${currentLine}.`
+
+function nowServing(katzDeliLine) {
+  if (katzDeliLine.length > 0) {
+    var currentLine = katzDeliLine.shift() 
+    return `Currently serving ${currentLine}.`
   } 
   if (katzDeliLine.length === 0){
     return 'There is nobody waiting to be served!'
@@ -32,6 +33,3 @@ function currentLine(katzDeliLine) {
   
   return lineStr
 }
-
-
-// "The line is currently: 1. Ada, 2. Grace, 3. Kent,"
